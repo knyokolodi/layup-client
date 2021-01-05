@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="#">Layup assessment</a>
+      <router-link class="navbar-brand" to="/">
+        Layup assessment
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
