@@ -109,7 +109,7 @@ export default {
     async addUser(e) {
       e.preventDefault();
       try {
-        const response = await axios.post(`/api/users`, this.user);
+        const response = await axios.post(`${API_URL}/api/users`, this.user);
 
         const { message } = response.data;
         this.user = {
