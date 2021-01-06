@@ -18,13 +18,13 @@
 
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <router-link class="nav-link" to="/">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/" exact>
               Users
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about">
+            <router-link class="nav-link" to="/about" exact>
               About
             </router-link>
           </li>
@@ -33,3 +33,9 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+.router-link-exact-active {
+  color: #ffffff;
+}
+</style>

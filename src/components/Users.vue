@@ -10,7 +10,10 @@
           Add User
         </router-link>
       </div>
-      <div class="col-md-12 py-3">
+      <div class="col-md-12 py-3" v-if="users.length < 1">
+        <h3>No records found!</h3>
+      </div>
+      <div class="col-md-12 py-3" v-else>
         <table class="table table-hover table-striped">
           <thead>
             <tr>
@@ -60,6 +63,7 @@ export default {
       try {
         this.loading = true;
         const response = await axios.get(`${API_URL}/api/users`);
+
         this.users = response.data.users;
         this.loading = false;
       } catch (error) {
